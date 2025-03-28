@@ -1,0 +1,71 @@
+:root {
+   --primary-color: #ee4d2d;
+   --white-color: #fff;
+   --black-color: #000;
+   --text-color: #333;
+   --border-color: #dbdbdb;
+   --star-gold-color: #ffce3e;
+
+   --header-height: 120px;
+   --navbar-height: 34px;
+   --header_soft-bar-height: 46px;
+   --header-with-search-height: calc(var(--header-height)- var(--navbar-height));
+}
+
+* {
+   box-sizing: inherit; /*inherit nghĩa là: tất cả phần tử (*) sẽ kế thừa giá trị box-sizing từ phần tử cha (html)*/
+}
+
+html {
+   font-size: 62.5%; /* Mặc định, trình duyệt đặt font-size của html là 16px.-> 16px × 62.5%=10px -> 1rem = 10px*/
+   line-height: 1.6rem;
+   font-family: "Roboto", sans-serif;
+   box-sizing: border-box;
+   /*
+   box-sizing: content-box -> width = content width (không tính border và padding)
+   box-sizing: border-box -> width = content + padding + border
+   */
+}
+
+/* Responsive */
+.grid__row {
+   display: flex;
+   flex-wrap: wrap;
+   margin: 0 -5px;
+}
+
+/* Test */
+
+.grid__column-2 {
+   padding: 0 5px;
+   width: 16.6667%;
+}
+
+.grid__column-2-4 {
+   padding: 0 5px;
+   width: 20%;
+}
+
+.grid__column-10 {
+   padding: 0 5px;
+   width: 83.3333%;
+}
+
+/* Animation */
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+@keyframes growth {
+   from {
+      transform: scale(var(--growth-from));
+   }
+   to {
+      transform: scale(var(--growth-to));
+   }
+}

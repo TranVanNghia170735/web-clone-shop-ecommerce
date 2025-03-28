@@ -1,0 +1,106 @@
+.app {
+   overflow: hidden;
+}
+
+.header {
+   /* height: var(--header-height); */
+   height: 350px;
+   background-image: linear-gradient(0, #fe6433, #f53e2d);
+   /* background-image: linear-gradient(hướng, màu-bắt-đầu, màu-kết-thúc); */
+   /*0deg → Gradient từ dưới lên trên*/
+}
+
+.header__navbar {
+   display: flex;
+   justify-content: space-between;
+}
+
+.header__navbar-list {
+   list-style: none;
+   padding-left: 0;
+   margin: 4px 0 0 0;
+   display: flex;
+}
+
+.header__navbar-item {
+   margin: 0 8px;
+   position: relative;
+   min-height: 26px;
+}
+
+.header__navbar-item {
+   display: inline-block;
+   font-size: 1.3rem;
+   color: var(--white-color);
+   text-decoration: none;
+   font-weight: 300;
+}
+
+.header__navbar-item {
+   display: flex;
+   align-items: center;
+}
+
+.header__navbar-item--separate::after {
+   content: "";
+   display: block;
+   position: absolute;
+   border-left: 1px solid #fb9086;
+   height: 16px;
+   right: -9px;
+   top: 6px;
+}
+
+.header__navbar-item-has-qr:hover .header__qr {
+   display: block;
+}
+
+.header__navbar-item:hover {
+   cursor: pointer;
+   color: rgb(255, 255, 255, 0.7);
+}
+
+/*Header QR code */
+.header__qr {
+   width: 186px;
+   background-color: var(--white-color);
+   position: absolute;
+   left: 0;
+   top: 118%;
+   padding: 8px;
+   border-radius: 2px;
+   display: none;
+   animation: fadeIn ease-in 0.3s;
+   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+/*Làm cầu nối cho "Vào cửa hàng trên ứng dụng và QR"*/
+.header__qr::before {
+   position: absolute;
+   left: 0;
+   top: -16px;
+   width: 100%;
+   height: 20px;
+   content: "";
+   display: block;
+}
+
+.header__qr-img {
+   width: 100%;
+}
+
+.header__qr-apps {
+   display: flex;
+   justify-content: space-between;
+}
+
+.header__qr-link:nth-child(1) {
+   margin-left: 11px;
+}
+
+.header__qr-link:nth-child(2) {
+   margin-right: 11px;
+}
+
+.header__qr-download-img {
+   height: 16px;
+}

@@ -1,30 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopee</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
-    <link rel="stylesheet" href="./assets/css/base.css" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="stylesheet" href="./assets/css/grid.css" />
-    <link rel="stylesheet" href="./assets/css/responsive.css" />
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.7.2-web" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="app">
-      <header class="header"></header>
-      <div class="app__container"></div>
-      <footer class="footer"></footer>
-    </div>
-  </body>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Shopee</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+      <link rel="stylesheet" href="./assets/css/base.css" />
+      <link rel="stylesheet" href="./assets/css/main.css" />
+      <link rel="stylesheet" href="./assets/css/grid.css" />
+      <link rel="stylesheet" href="./assets/css/responsive.css" />
+      <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.7.2-web" />
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet" />
+   </head>
+   <body>
+      <div class="app">
+         <header class="header">
+            <div class="grid wide">
+               <nav class="header__navbar hide-on-mobile-tablet">
+                  <ul class="header__navbar-list">
+                     <li class="header__navbar-item header__navbar-item-has-qr header__navbar-item--separate">
+                        Vào cửa hàng trên ứng dụng Shopee
+                        <!-- QR Code -->
+                        <div class="header__qr">
+                           <img src="./assets/img/qr_code.png" alt="QR code" class="header__qr-img" />
+                           <div class="header__qr-apps">
+                              <a href="" class="header__qr-link">
+                                 <img
+                                    src="./assets/img/gg_play.png"
+                                    alt="Google Play"
+                                    class="header__qr-download-img"
+                                 />
+                              </a>
+                              <a href="" class="header__qr-link">
+                                 <img
+                                    src="./assets/img/app_store.png"
+                                    alt="App Store"
+                                    class="header__qr-download-img"
+                                 />
+                              </a>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="header__navbar-item">
+                        <span class="header__navbar-no-pointer">Kết nối</span>
+                        <a href="" class="header__navbar-icon-link">
+                           <i class="header__navbar-icon fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="" class="header__navbar-icon-link">
+                           <i class="header__navbar-icon fa-brands fa-instagram"></i>
+                        </a>
+                     </li>
+                  </ul>
+                  <!-- <ul class="header__navbar-list">
+                     <li class="header__navbar-item header__navbar-item-has-notify">
+                        <a href="" class="header__navbar-item-link">
+                           <i class="header__navbar-icon far fa-bell"></i>
+                           Thông báo
+                        </a>
+                     </li>
+                     <li class="header__nav-item">
+                        <a href="" class="header__navbar-item-link">
+                           <i class="header__navbar-icon fa-regular fa-circle-question"></i>
+                           Trợ giúp
+                        </a>
+                     </li>
+                     <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">
+                        Đăng kí
+                     </li>
+                     <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li>
+                     <li class="header__navbar-item header__navbar-user">
+                        <img src="" alt="" class="header__navbar-user-img" />
+                        <span class="header__navbar-user-name">NghiaTV8</span>
+                        <ul class="header__navbar-user-menu">
+                           <li class="header__navbar-user-item"><a href="#">Tài khoản của tôi</a></li>
+                           <li class="header__navbar-user-item"><a href="#">Địa chỉ của tôi</a></li>
+                           <li class="header__navbar-user-item"><a href="#">Đơn mua</a></li>
+                           <li class="header__navbar-user-item header__navbar-user-item-separate">
+                              <a href="#">Đăng xuất</a>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul> -->
+               </nav>
+               <div class="header-with-search"></div>
+            </div>
+         </header>
+         <div class="app__container"></div>
+         <footer class="footer"></footer>
+      </div>
+   </body>
 </html>
