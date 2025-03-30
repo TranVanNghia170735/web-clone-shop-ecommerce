@@ -27,27 +27,39 @@ html {
    */
 }
 
-/* Responsive */
+/* Test */
+.grid {
+   width: 1200px;
+   max-width: 100%;
+   margin: 0 auto;
+}
+
+.grid__full-width {
+   width: 100%;
+}
+
 .grid__row {
    display: flex;
    flex-wrap: wrap;
-   margin: 0 -5px;
+   margin-left: -5px;
+   margin-right: -5px;
 }
 
-/* Test */
-
 .grid__column-2 {
-   padding: 0 5px;
+   padding-left: 5px;
+   padding-right: 5px;
    width: 16.6667%;
 }
 
 .grid__column-2-4 {
-   padding: 0 5px;
+   padding-left: 5px;
+   padding-right: 5px;
    width: 20%;
 }
 
 .grid__column-10 {
-   padding: 0 5px;
+   padding-left: 5px;
+   padding-right: 5px;
    width: 83.3333%;
 }
 
@@ -73,11 +85,11 @@ html {
 /* Modal */
 .modal {
    position: fixed;
+   display: flex;
    top: 0;
    right: 0;
    bottom: 0;
    left: 0;
-   display: flex;
 }
 
 .modal__overlay {
@@ -112,7 +124,7 @@ html {
    display: inline-flex;
    align-items: center;
    justify-content: center;
-   line-height: 1.7rem;
+   line-height: 1.6rem;
 }
 
 .btn.btn-normal:hover {
@@ -121,20 +133,85 @@ html {
 
 .btn--size-s {
    height: 32px;
-   font-size: 12px;
+   font-size: 1.2rem;
    padding: 0 8px;
 }
-.btn.btn--primary {
+.btn.btn--primary-color {
    color: var(--white-color);
    background-color: var(--primary-color);
 }
 
 .btn.btn--disable {
-   color: #949494;
    cursor: default;
-   background-color: #c3c3c3;
+   background-color: #ccc;
 }
 
 .auth-form__socials-icons {
    font-size: 1.8rem;
+}
+
+/* Price  select */
+
+.price-select {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   min-width: 200px;
+   height: 34px;
+   padding: 0 12px;
+   margin-left: 10px;
+   border-radius: 2px;
+   background-color: var(--white-color);
+}
+
+.price-select__label {
+   font-size: 1.4rem;
+}
+
+.price-select__icon {
+   font-size: 1.3rem;
+   color: var(--text-color);
+   top: -1px;
+}
+
+.price-select:hover .price-select__list {
+   display: block;
+}
+
+.price-select__list {
+   position: absolute;
+   display: none;
+   top: 36px;
+   left: 0;
+   right: 0;
+   margin: 0;
+   padding: 8px 16px;
+   border-radius: 2px;
+   background-color: var(--white-color);
+   list-style: none;
+   box-shadow: 0.1rem 0 1rem rgba(0, 0, 0, 0.1);
+   z-index: 1;
+}
+
+.price-select__list::after {
+   position: absolute;
+   content: "";
+   display: block;
+   top: -10px;
+   right: 0;
+   width: 100%;
+   height: 10px;
+}
+
+.price-select__link {
+   display: block;
+   padding: 8px 0;
+   color: var(--text-color);
+   font-size: 1.4rem;
+   text-decoration: none;
+}
+
+.price-select__link:hover {
+   color: var(--primary-color);
 }

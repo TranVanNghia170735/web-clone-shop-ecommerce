@@ -17,7 +17,7 @@
    <body>
       <div class="app">
          <header class="header">
-            <div class="grid wide">
+            <div class="grid">
                <nav class="header__navbar hide-on-mobile-tablet">
                   <ul class="header__navbar-list">
                      <li class="header__navbar-item header__navbar-item-has-qr header__navbar-item--separate">
@@ -138,10 +138,35 @@
                            Trợ giúp
                         </a>
                      </li>
-                     <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">
+
+                     <li class="header__navbar-item header__navbar-item-languages">
+                        <i class="header__navbar-item__icon fas fa-globe"></i>
+                        Tiếng Việt
+
+                        <ul class="header__navbar-language-menu">
+                           <li class="header__navbar-language-item"><a>Tiếng Việt</a></li>
+                           <li class="header__navbar-language-item"><a>English</a></li>
+                        </ul>
+                     </li>
+
+                     <li class="header__navbar-item header__navbar-item-user">
+                        <img src="./assets/img/gg_play.png" alt="user-img" class="header__navbar-user-img" />
+                        <span class="header__navbar-user-name">NghiaTV8</span>
+
+                        <ul class="header__navbar-user-menu">
+                           <li class="header__navbar-user-item"><a>Tài khoản của tôi</a></li>
+                           <li class="header__navbar-user-item"><a>Địa chỉ của tôi</a></li>
+                           <li class="header__navbar-user-item"><a>Đơn mua</a></li>
+                           <li class="header__navbar-user-item header__navbar-user-item--separate">
+                              <a>Đăng xuất</a>
+                           </li>
+                        </ul>
+                     </li>
+
+                     <!-- <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">
                         Đăng ký
                      </li>
-                     <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li>
+                     <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li> -->
                      <!-- <li class="header__navbar-item header__navbar-user">
                         <img src="" alt="" class="header__navbar-user-img" />
                         <span class="header__navbar-user-name">NghiaTV8</span>
@@ -157,9 +182,6 @@
                   </ul>
                </nav>
                <div class="header-with-search">
-                  <label for="mobile-search-checkbox" class="header__mobile-search">
-                     <i class="header__mobile-search-icon fas fa-search"></i>
-                  </label>
                   <div class="header__logo hide-on-tablet">
                      <a href="/" class="header__logo-link">
                         <svg viewBox="0 0 192 65" class="header__logo-img">
@@ -339,27 +361,645 @@
                </div>
             </div>
          </header>
-         <div class="app__container">
-            <div class="grid wide">
-               <div class="row sm-gutter app__content">
-                  <!-- <div class="col l-2 m-10 c-0"> -->
-                  <nav class="category">
-                     <h3 class="category__heading">Danh mục</h3>
-                     <ul class="category-list">
-                        <li class="category-item category-item--active">
-                           <a href="#" class="category-item-link">Trang điểm mắt</a>
+         <div class="container">
+            <div class="grid">
+               <div class="grid__row app__content">
+                  <div class="grid__column-2">
+                     <nav class="category">
+                        <h3 class="category__heading">Danh mục</h3>
+                        <ul class="category-list">
+                           <li class="category-item category-item--active">
+                              <a href="#" class="category-item-link">Trang điểm mắt</a>
+                           </li>
+                           <li class="category-item"><a href="#" class="category-item-link">Trang điểm môi</a></li>
+                           <li class="category-item"><a href="#" class="category-item-link">Trang điểm mặt</a></li>
+                           <li class="category-item"><a href="#" class="category-item-link">Phụ kiện</a></li>
+                           <li class="category-item"><a href="#" class="category-item-link">Mỹ phẩm</a></li>
+                        </ul>
+                     </nav>
+                  </div>
+                  <div class="grid__column-10">
+                     <div class="home-filter">
+                        <span class="home-filter__label">Sắp xếp theo</span>
+                        <button class="home-filter__btn btn">Phổ biến</button>
+                        <button class="home-filter__btn btn btn--primary-color">Mới nhất</button>
+                        <button class="home-filter__btn btn">Bán chạy</button>
+
+                        <div class="price-select">
+                           <span class="price-select__label">Giá</span>
+                           <i class="price-select__icon fa-solid fa-chevron-down"></i>
+
+                           <!-- List option -->
+                           <ul class="price-select__list">
+                              <li class="price-select__item">
+                                 <a href="#" class="price-select__link">Giá: Thấp đến cao</a>
+                              </li>
+                              <li class="price-select__item">
+                                 <a href="#" class="price-select__link">Giá: Cao đến thấp</a>
+                              </li>
+                           </ul>
+                        </div>
+
+                        <div class="home-filter__pagination">
+                           <span class="home-filter__page-number">
+                              <span class="home-filter__page-current">1</span>
+                              /14
+                           </span>
+
+                           <div class="home-filter__control">
+                              <a href="#" class="home-filter__page-btn home-filter__page-btn-disable">
+                                 <i class="home-filter__page-icon fa-solid fa-chevron-left"></i>
+                              </a>
+                              <a href="" class="home-filter__page-btn">
+                                 <i class="home-filter__page-icon fa-solid fa-chevron-right"></i>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="home-product">
+                        <div class="grid__row">
+                           <!-- Product item -->
+                           <div class="grid__column-2-4">
+                              <a class="home-product__item" href="#">
+                                 <div
+                                    class="home-product__item_img"
+                                    style="
+                                       background-image: url(https://down-vn.img.susercontent.com/file/vn-11134201-7r98o-ll5u3bxnnu7q42);
+                                    "
+                                 ></div>
+                                 <h4 class="home-product__item_name">
+                                    Mascara Dài Mi và Cong Mi Maybelline New York Hyper Curl Waterproof,Mascara Dài Mi
+                                    và Cong Mi Maybelline New York Hyper Curl Waterproof
+                                 </h4>
+
+                                 <div class="home-product__price">
+                                    <span class="home-product__price-root">168.000đ</span>
+                                    <span class="home-product__price-sale">139.000đ</span>
+                                 </div>
+
+                                 <div class="home-product__actions">
+                                    <span class="home-product__like home-product__like--active">
+                                       <i class="home-product__like-icon fa fa-heart"></i>
+                                       <i class="home-product__like-icon--active fas fa-heart"></i>
+                                    </span>
+                                    <span class="home-product__rating">
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <div class="home-product__sold">999 đã bán</div>
+                                 </div>
+                                 <div class="home-product__origin">
+                                    <span class="home-product__brand">Maybelline</span>
+                                    <div class="home-product__origin-name">Mỹ</div>
+                                 </div>
+                                 <div class="home-product__favorite">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Yêu thích</span>
+                                 </div>
+                                 <div class="home-product__sale-off">
+                                    <span class="home-product__sale-off-percent">10%</span>
+                                    <span class="home-product__sale-off-label">GIẢM</span>
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="grid__column-2-4">
+                              <a class="home-product__item" href="#">
+                                 <div
+                                    class="home-product__item_img"
+                                    style="
+                                       background-image: url(https://cf.shopee.vn/file/4dc1efe3e1ed2d1bf7e98ea3b17d1f5e_tn);
+                                    "
+                                 ></div>
+                                 <h4 class="home-product__item_name">
+                                    Điện Thoại Samsung Galaxy Z Flip3 5G 256GB - Hàng Chính Hãng
+                                 </h4>
+
+                                 <div class="home-product__price">
+                                    <span class="home-product__price-root">26.900.000đ</span>
+                                    <span class="home-product__price-sale">24.900.000đ</span>
+                                 </div>
+
+                                 <div class="home-product__actions">
+                                    <span class="home-product__like home-product__like--active">
+                                       <i class="home-product__like-icon fa fa-heart"></i>
+                                       <i class="home-product__like-icon--active fas fa-heart"></i>
+                                    </span>
+                                    <span class="home-product__rating">
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <div class="home-product__sold">999 đã bán</div>
+                                 </div>
+                                 <div class="home-product__origin">
+                                    <span class="home-product__brand">Maybelline</span>
+                                    <div class="home-product__origin-name">Mỹ</div>
+                                 </div>
+                                 <div class="home-product__favorite">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Yêu thích</span>
+                                 </div>
+                                 <div class="home-product__sale-off">
+                                    <span class="home-product__sale-off-percent">10%</span>
+                                    <span class="home-product__sale-off-label">GIẢM</span>
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="grid__column-2-4">
+                              <a class="home-product__item" href="#">
+                                 <div
+                                    class="home-product__item_img"
+                                    style="
+                                       background-image: url(https://cf.shopee.vn/file/61c05579a91a56c6fa20aaeefd5fe9f7_tn);
+                                    "
+                                 ></div>
+                                 <h4 class="home-product__item_name">
+                                    Điện Thoại Samsung Galaxy Z Flip3 5G 256GB - Hàng Chính Hãng
+                                 </h4>
+
+                                 <div class="home-product__price">
+                                    <span class="home-product__price-root">26.900.000đ</span>
+                                    <span class="home-product__price-sale">24.900.000đ</span>
+                                 </div>
+
+                                 <div class="home-product__actions">
+                                    <span class="home-product__like home-product__like--active">
+                                       <i class="home-product__like-icon fa fa-heart"></i>
+                                       <i class="home-product__like-icon--active fas fa-heart"></i>
+                                    </span>
+                                    <span class="home-product__rating">
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <div class="home-product__sold">88 đã bán</div>
+                                 </div>
+                                 <div class="home-product__origin">
+                                    <span class="home-product__brand">Samsung</span>
+                                    <div class="home-product__origin-name">Hàn Quốc</div>
+                                 </div>
+                                 <div class="home-product__favorite">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Yêu thích</span>
+                                 </div>
+                                 <div class="home-product__sale-off">
+                                    <span class="home-product__sale-off-percent">10%</span>
+                                    <span class="home-product__sale-off-label">GIẢM</span>
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="grid__column-2-4">
+                              <a class="home-product__item" href="#">
+                                 <div
+                                    class="home-product__item_img"
+                                    style="
+                                       background-image: url(https://cf.shopee.vn/file/a51f94cd646baafb4ea328deaccf4aec_tn);
+                                    "
+                                 ></div>
+                                 <h4 class="home-product__item_name">
+                                    Điện Thoại Samsung Galaxy Z Flip3 5G 256GB - Hàng Chính Hãng
+                                 </h4>
+
+                                 <div class="home-product__price">
+                                    <span class="home-product__price-root">26.900.000đ</span>
+                                    <span class="home-product__price-sale">24.900.000đ</span>
+                                 </div>
+
+                                 <div class="home-product__actions">
+                                    <span class="home-product__like home-product__like--active">
+                                       <i class="home-product__like-icon fa fa-heart"></i>
+                                       <i class="home-product__like-icon--active fas fa-heart"></i>
+                                    </span>
+                                    <span class="home-product__rating">
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <div class="home-product__sold">88 đã bán</div>
+                                 </div>
+                                 <div class="home-product__origin">
+                                    <span class="home-product__brand">Samsung</span>
+                                    <div class="home-product__origin-name">Hàn Quốc</div>
+                                 </div>
+                                 <div class="home-product__favorite">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Yêu thích</span>
+                                 </div>
+                                 <div class="home-product__sale-off">
+                                    <span class="home-product__sale-off-percent">10%</span>
+                                    <span class="home-product__sale-off-label">GIẢM</span>
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="grid__column-2-4">
+                              <a class="home-product__item" href="#">
+                                 <div
+                                    class="home-product__item_img"
+                                    style="
+                                       background-image: url(https://cf.shopee.vn/file/59f3e1b4a6e25c92462aff8dbfdde9f9_tn);
+                                    "
+                                 ></div>
+                                 <h4 class="home-product__item_name">
+                                    Điện Thoại Samsung Galaxy Z Flip3 5G 256GB - Hàng Chính Hãng
+                                 </h4>
+
+                                 <div class="home-product__price">
+                                    <span class="home-product__price-root">26.900.000đ</span>
+                                    <span class="home-product__price-sale">24.900.000đ</span>
+                                 </div>
+
+                                 <div class="home-product__actions">
+                                    <span class="home-product__like home-product__like--active">
+                                       <i class="home-product__like-icon fa fa-heart"></i>
+                                       <i class="home-product__like-icon--active fas fa-heart"></i>
+                                    </span>
+                                    <span class="home-product__rating">
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <div class="home-product__sold">88 đã bán</div>
+                                 </div>
+                                 <div class="home-product__origin">
+                                    <span class="home-product__brand">Samsung</span>
+                                    <div class="home-product__origin-name">Hàn Quốc</div>
+                                 </div>
+                                 <div class="home-product__favorite">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Yêu thích</span>
+                                 </div>
+                                 <div class="home-product__sale-off">
+                                    <span class="home-product__sale-off-percent">10%</span>
+                                    <span class="home-product__sale-off-label">GIẢM</span>
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="grid__column-2-4">
+                              <a class="home-product__item" href="#">
+                                 <div
+                                    class="home-product__item_img"
+                                    style="
+                                       background-image: url(https://down-vn.img.susercontent.com/file/vn-11134201-7r98o-ll5u3bxnnu7q42);
+                                    "
+                                 ></div>
+                                 <h4 class="home-product__item_name">
+                                    Mascara Dài Mi và Cong Mi Maybelline New York Hyper Curl Waterproof,Mascara Dài Mi
+                                    và Cong Mi Maybelline New York Hyper Curl Waterproof
+                                 </h4>
+
+                                 <div class="home-product__price">
+                                    <span class="home-product__price-root">168.000đ</span>
+                                    <span class="home-product__price-sale">139.000đ</span>
+                                 </div>
+
+                                 <div class="home-product__actions">
+                                    <span class="home-product__like home-product__like--active">
+                                       <i class="home-product__like-icon fa fa-heart"></i>
+                                       <i class="home-product__like-icon--active fas fa-heart"></i>
+                                    </span>
+                                    <span class="home-product__rating">
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <div class="home-product__sold">999 đã bán</div>
+                                 </div>
+                                 <div class="home-product__origin">
+                                    <span class="home-product__brand">Maybelline</span>
+                                    <div class="home-product__origin-name">Mỹ</div>
+                                 </div>
+                                 <div class="home-product__favorite">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Yêu thích</span>
+                                 </div>
+                                 <div class="home-product__sale-off">
+                                    <span class="home-product__sale-off-percent">10%</span>
+                                    <span class="home-product__sale-off-label">GIẢM</span>
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="grid__column-2-4">
+                              <a class="home-product__item" href="#">
+                                 <div
+                                    class="home-product__item_img"
+                                    style="
+                                       background-image: url(https://cf.shopee.vn/file/4dc1efe3e1ed2d1bf7e98ea3b17d1f5e_tn);
+                                    "
+                                 ></div>
+                                 <h4 class="home-product__item_name">
+                                    Điện Thoại Samsung Galaxy Z Flip3 5G 256GB - Hàng Chính Hãng
+                                 </h4>
+
+                                 <div class="home-product__price">
+                                    <span class="home-product__price-root">26.900.000đ</span>
+                                    <span class="home-product__price-sale">24.900.000đ</span>
+                                 </div>
+
+                                 <div class="home-product__actions">
+                                    <span class="home-product__like home-product__like--active">
+                                       <i class="home-product__like-icon fa fa-heart"></i>
+                                       <i class="home-product__like-icon--active fas fa-heart"></i>
+                                    </span>
+                                    <span class="home-product__rating">
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <div class="home-product__sold">999 đã bán</div>
+                                 </div>
+                                 <div class="home-product__origin">
+                                    <span class="home-product__brand">Maybelline</span>
+                                    <div class="home-product__origin-name">Mỹ</div>
+                                 </div>
+                                 <div class="home-product__favorite">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Yêu thích</span>
+                                 </div>
+                                 <div class="home-product__sale-off">
+                                    <span class="home-product__sale-off-percent">10%</span>
+                                    <span class="home-product__sale-off-label">GIẢM</span>
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="grid__column-2-4">
+                              <a class="home-product__item" href="#">
+                                 <div
+                                    class="home-product__item_img"
+                                    style="
+                                       background-image: url(https://cf.shopee.vn/file/61c05579a91a56c6fa20aaeefd5fe9f7_tn);
+                                    "
+                                 ></div>
+                                 <h4 class="home-product__item_name">
+                                    Điện Thoại Samsung Galaxy Z Flip3 5G 256GB - Hàng Chính Hãng
+                                 </h4>
+
+                                 <div class="home-product__price">
+                                    <span class="home-product__price-root">26.900.000đ</span>
+                                    <span class="home-product__price-sale">24.900.000đ</span>
+                                 </div>
+
+                                 <div class="home-product__actions">
+                                    <span class="home-product__like home-product__like--active">
+                                       <i class="home-product__like-icon fa fa-heart"></i>
+                                       <i class="home-product__like-icon--active fas fa-heart"></i>
+                                    </span>
+                                    <span class="home-product__rating">
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <div class="home-product__sold">88 đã bán</div>
+                                 </div>
+                                 <div class="home-product__origin">
+                                    <span class="home-product__brand">Samsung</span>
+                                    <div class="home-product__origin-name">Hàn Quốc</div>
+                                 </div>
+                                 <div class="home-product__favorite">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Yêu thích</span>
+                                 </div>
+                                 <div class="home-product__sale-off">
+                                    <span class="home-product__sale-off-percent">10%</span>
+                                    <span class="home-product__sale-off-label">GIẢM</span>
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="grid__column-2-4">
+                              <a class="home-product__item" href="#">
+                                 <div
+                                    class="home-product__item_img"
+                                    style="
+                                       background-image: url(https://cf.shopee.vn/file/a51f94cd646baafb4ea328deaccf4aec_tn);
+                                    "
+                                 ></div>
+                                 <h4 class="home-product__item_name">
+                                    Điện Thoại Samsung Galaxy Z Flip3 5G 256GB - Hàng Chính Hãng
+                                 </h4>
+
+                                 <div class="home-product__price">
+                                    <span class="home-product__price-root">26.900.000đ</span>
+                                    <span class="home-product__price-sale">24.900.000đ</span>
+                                 </div>
+
+                                 <div class="home-product__actions">
+                                    <span class="home-product__like home-product__like--active">
+                                       <i class="home-product__like-icon fa fa-heart"></i>
+                                       <i class="home-product__like-icon--active fas fa-heart"></i>
+                                    </span>
+                                    <span class="home-product__rating">
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <div class="home-product__sold">88 đã bán</div>
+                                 </div>
+                                 <div class="home-product__origin">
+                                    <span class="home-product__brand">Samsung</span>
+                                    <div class="home-product__origin-name">Hàn Quốc</div>
+                                 </div>
+                                 <div class="home-product__favorite">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Yêu thích</span>
+                                 </div>
+                                 <div class="home-product__sale-off">
+                                    <span class="home-product__sale-off-percent">10%</span>
+                                    <span class="home-product__sale-off-label">GIẢM</span>
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="grid__column-2-4">
+                              <a class="home-product__item" href="#">
+                                 <div
+                                    class="home-product__item_img"
+                                    style="
+                                       background-image: url(https://cf.shopee.vn/file/59f3e1b4a6e25c92462aff8dbfdde9f9_tn);
+                                    "
+                                 ></div>
+                                 <h4 class="home-product__item_name">
+                                    Điện Thoại Samsung Galaxy Z Flip3 5G 256GB - Hàng Chính Hãng
+                                 </h4>
+
+                                 <div class="home-product__price">
+                                    <span class="home-product__price-root">26.900.000đ</span>
+                                    <span class="home-product__price-sale">24.900.000đ</span>
+                                 </div>
+
+                                 <div class="home-product__actions">
+                                    <span class="home-product__like home-product__like--active">
+                                       <i class="home-product__like-icon fa fa-heart"></i>
+                                       <i class="home-product__like-icon--active fas fa-heart"></i>
+                                    </span>
+                                    <span class="home-product__rating">
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="home-product__rating-gold fa-solid fa-star"></i>
+                                       <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <div class="home-product__sold">88 đã bán</div>
+                                 </div>
+                                 <div class="home-product__origin">
+                                    <span class="home-product__brand">Samsung</span>
+                                    <div class="home-product__origin-name">Hàn Quốc</div>
+                                 </div>
+                                 <div class="home-product__favorite">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Yêu thích</span>
+                                 </div>
+                                 <div class="home-product__sale-off">
+                                    <span class="home-product__sale-off-percent">10%</span>
+                                    <span class="home-product__sale-off-label">GIẢM</span>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <ul class="pagination home-product__pagination">
+                        <li class="pagination-item">
+                           <a href="#" class="pagination-item__link">
+                              <i class="pagination-item__icon fas fa-chevron-left"></i>
+                           </a>
                         </li>
-                        <li class="category-item"><a href="#" class="category-item-link">Trang điểm môi</a></li>
-                        <li class="category-item"><a href="#" class="category-item-link">Trang điểm mặt</a></li>
-                        <li class="category-item"><a href="#" class="category-item-link">Phụ kiện</a></li>
-                        <li class="category-item"><a href="#" class="category-item-link">Mỹ phẩm</a></li>
+                        <li class="pagination-item pagination-item--active">
+                           <a href="#" class="pagination-item__link">1</a>
+                        </li>
+                        <li class="pagination-item">
+                           <a href="#" class="pagination-item__link">2</a>
+                        </li>
+                        <li class="pagination-item">
+                           <a href="#" class="pagination-item__link">3</a>
+                        </li>
+                        <li class="pagination-item">
+                           <a href="#" class="pagination-item__link">4</a>
+                        </li>
+                        <li class="pagination-item">
+                           <a href="#" class="pagination-item__link">5</a>
+                        </li>
+                        <li class="pagination-item">
+                           <a href="#" class="pagination-item__link">...</a>
+                        </li>
+                        <li class="pagination-item">
+                           <a href="#" class="pagination-item__link">14</a>
+                        </li>
+                        <li class="pagination-item">
+                           <a href="#" class="pagination-item__link">
+                              <i class="pagination-item__icon fas fa-chevron-right"></i>
+                           </a>
+                        </li>
                      </ul>
-                  </nav>
-                  <!-- </div> -->
+                  </div>
                </div>
             </div>
          </div>
-         <footer class="footer"></footer>
+         <footer class="footer">
+            <div class="grid">
+               <div class="grid__row">
+                  <div class="grid__column-2-4">
+                     <h3 class="footer__heading">CHĂM SÓC KHÁCH HÀNG</h3>
+                     <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__item-link">Trung tâm trợ giúp</a></li>
+                        <li class="footer__item"><a href="#" class="footer__item-link">Hướng dẫn mua hàng</a></li>
+                        <li class="footer__item"><a href="#" class="footer__item-link">Hướng dẫn bán hàng</a></li>
+                        <li class="footer__item"><a href="#" class="footer__item-link">Trả hàng và hoàn tiền</a></li>
+                        <li class="footer__item"><a href="#" class="footer__item-link">Chính sách bảo hành</a></li>
+                     </ul>
+                  </div>
+                  <div class="grid__column-2-4">
+                     <h3 class="footer__heading">VỀ SHOPEE</h3>
+                     <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__item-link">Giới thiệu về Shopee</a></li>
+                        <li class="footer__item"><a href="#" class="footer__item-link">Tuyển dụng</a></li>
+                        <li class="footer__item"><a href="#" class="footer__item-link">Điều khoản Shopee</a></li>
+                        <li class="footer__item"><a href="#" class="footer__item-link">Chính hãng</a></li>
+                        <li class="footer__item"><a href="#" class="footer__item-link">Chính sách bảo mật</a></li>
+                     </ul>
+                  </div>
+                  <div class="grid__column-2-4">
+                     <h3 class="footer__heading">THANH TOÁN</h3>
+                     <ul class="footer__list-pay">
+                        <li class="footer__item-pay">
+                           <i class="footer__item-icon-pay fab fa-cc-visa"></i>
+                        </li>
+                        <li class="footer__item-pay">
+                           <i class="footer__item-icon-pay fab fa-cc-mastercard"></i>
+                        </li>
+                        <li class="footer__item-pay">
+                           <i class="footer__item-icon-pay fab fa-cc-jcb"></i>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid__column-2-4">
+                     <h3 class="footer__heading">THEO DÕI CHÚNG TÔI TRÊN</h3>
+                     <ul class="footer__list">
+                        <li class="footer__item">
+                           <a href="#" class="footer__item-link">
+                              <i class="footer__item-icon fab fa-facebook"></i>
+                              Facebook
+                           </a>
+                        </li>
+                        <li class="footer__item">
+                           <a href="#" class="footer__item-link">
+                              <i class="footer__item-icon fab fa-instagram-square"></i>
+                              Instagram
+                           </a>
+                        </li>
+                        <li class="footer__item">
+                           <a href="#" class="footer__item-link">
+                              <i class="footer__item-icon fab fa-linkedin"></i>
+                              LinkedIn
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="grid__column-2-4">
+                     <h3 class="footer__heading">TẢI ỨNG DỤNG SHOPEE PAY</h3>
+                     <div class="footer__dowload">
+                        <img src="./assets/img/qr_code.png" alt="qr-footer" class="footer__dowload-qr" />
+                        <div class="footer__dowload-apps">
+                           <a href="#">
+                              <img
+                                 src="./assets/img/gg_play.png"
+                                 alt="googel-footer"
+                                 class="footer__dowload-apps-img"
+                              />
+                           </a>
+                           <a href="#">
+                              <img
+                                 src="./assets/img/app_store.png"
+                                 alt="apple-footer"
+                                 class="footer__dowload-apps-img"
+                              />
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="footer__bottom">
+               <div class="grid">
+                  <p class="footer__copyright">© 2025 - Bản quyền thuộc về công ty Mèo mửa</p>
+               </div>
+            </div>
+         </footer>
          <!-- <div class="modal">
             <div class="modal__overlay"></div>
             <div class="modal__body"> -->
